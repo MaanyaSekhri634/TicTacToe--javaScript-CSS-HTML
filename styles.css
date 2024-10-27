@@ -1,0 +1,30 @@
+.tic_tac_toe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    position: relative; /* as we want X and O to be placed absolutely on a relatively placed nearest ancestor*/
+    aspect-ratio: 1/1; /* square, 'grid' is not necessary */
+    font-size: 3rem;
+    color: white;
+}
+.btn{
+     display: none;/* visible only when someone wins and we need to start a new game */
+}
+.btn.active{
+    display: block;
+}
+.win{
+    background-color: rgb(70, 174, 70); /* add this color to make background of selected divs green upon winning*/
+}
